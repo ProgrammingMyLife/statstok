@@ -14,7 +14,17 @@ Statstok depends on `bs4` and `requests`
 
 ## Installation
 
-To install and add this to your project, simply clone foo `statstok.py` bar into the directory of your project 
+### Installation via PiP
+
+For windows users, you can do
+
+`pip install statstok`
+
+For linux and mac users, you can do 
+
+`pip3 install statstok`
+
+To manually install and add this to your project, simply clone foo `statstok.py` bar into the directory of your project 
 
 Make sure to add `from statstok import get_followers` or `from statstok import get_likes` before you start using statstok
 
@@ -25,13 +35,13 @@ Discord Bot
 ``` python
 import discord
 from discord.ext import commands
-from statstok import get_followers
+from statstok import statstok
 
 bot = commands.Bot(command_prefix="!")
 
 @bot.command()
 async def followers(ctx, username):
-    await ctx.send(f"That user has {get_followers(username)} followers")
+    await ctx.send(f"That user has {statstok.get_followers(username)} followers")
 
 bot.run("TOKEN")
 ```
