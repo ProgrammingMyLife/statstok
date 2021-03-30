@@ -1,6 +1,9 @@
 # Statstok
 <center> A simple python script that scrapes tiktok account's likes and followers using bs4 and requests </center>
 
+#### Note : 
+
+This project does not work anymore, and is no longer maintained.
 ## Functions
 
 ```get_followers(username)``` will return the username's follower count
