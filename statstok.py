@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 def get_followers(username):
     URL = f'https://www.tiktok.com/@{username}?lang=en'
-    page = requests.get(URL)
+    page = requests.get(URL, headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36"})
 
     soup = BeautifulSoup(page.content, 'html.parser')
 
